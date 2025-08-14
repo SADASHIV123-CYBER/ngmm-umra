@@ -8,6 +8,7 @@ import InstaLive from "../pages/LiveStreamInsta.jsx";
 import LiveStreamYt from "../pages/LiveStreamYt.jsx";
 import MandalInfo from "../pages/MandalInfo.jsx";
 import TimeTable from "../pages/TimeTable.jsx";
+import Dengi from '../pages/Dengi.jsx'
 
 export default function RoutesFile() {
   return (
@@ -21,6 +22,7 @@ export default function RoutesFile() {
       <Route path="ytLive" element={<LiveStreamYt />} />
       <Route path="info" element={<MandalInfo />} />
       <Route path="/timetable" element={<TimeTable />} />
+      <Route path="/dengi" element={<Dengi />} />
 
     </Routes>
   );
