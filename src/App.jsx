@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
 import Navbar from "./components/Navbar.jsx";
 import { requestNotificationPermission } from './utils/notification.js';
@@ -14,6 +14,6 @@ export default function App({ children }) {
   );
 }
 
-useEffect(() => {
-  requestNotificationPermission();
-}, []);
+// useEffect(() => {
+//   requestNotificationPermission();
+// }, []);
