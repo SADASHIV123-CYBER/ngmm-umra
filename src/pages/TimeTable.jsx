@@ -1,15 +1,17 @@
 import React from "react";
 
+const startDate = new Date(2025, 7, 28); // August is month 7 (0-based)
 const timetableData = [
   {
     day: "दि. 27 ऑगस्ट 2025 (गणेश चतुर्थी)",
     events: [{ time: "08:00 PM", activity: "आरती (फक्त रात्र्री)" }],
   },
-  // 28 Aug to 7 Sep (next 11 days)
   ...Array.from({ length: 11 }, (_, i) => {
-    const date = 28 + i;
+    const date = new Date(startDate);
+    date.setDate(startDate.getDate() + i);
+    const options = { day: "numeric", month: "long", year: "numeric" };
     return {
-      day: `दि. ${date} ऑगस्ट 2025`,
+      day: `दि. ${date.toLocaleDateString("mr-IN", options)}`,
       events: [
         { time: "08:00 AM", activity: "सकाळी आरती (जोडीदार आवश्यक)" },
         { time: "08:00 PM", activity: "रात्र्री आरती (जोडीदार आवश्यक)" },
