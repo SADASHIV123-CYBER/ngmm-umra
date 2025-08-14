@@ -1,0 +1,18 @@
+name: One-time Notification
+
+# Trigger schedule + manual trigger
+on:
+  schedule:
+    - cron: '40 7 15 8 *' # 15 Aug 2025, 1:10 PM IST
+  workflow_dispatch: # allows manual trigger
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Send Notification
+        run: |
+          echo "🚨 Hello! This is your scheduled notification for 15 Aug 2025, 1:10 PM IST."
