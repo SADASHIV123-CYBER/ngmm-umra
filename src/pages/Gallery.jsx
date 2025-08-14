@@ -53,14 +53,23 @@ export default function Gallery() {
 
         {/* Modal */}
         {selectedPhoto && (
-          <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50 p-4">
-            <div className="bg-white rounded-2xl max-w-lg w-full relative shadow-2xl">
+          <div
+            className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50 p-4"
+            onClick={closeModal} // Close when clicking outside the modal
+          >
+            <div
+              className="bg-white rounded-2xl max-w-lg w-full relative shadow-2xl"
+              onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside modal
+            >
+              {/* Exit Button */}
               <button
-                className="absolute top-3 right-3 text-gray-600 hover:text-red-500 text-2xl"
                 onClick={closeModal}
+                className="absolute top-2 right-2 text-white bg-red-500 hover:bg-red-600 rounded-full w-10 h-10 flex items-center justify-center text-2xl shadow-lg"
+                aria-label="Close"
               >
                 ✖
               </button>
+
               <img
                 src={selectedPhoto.image}
                 alt={selectedPhoto.title}

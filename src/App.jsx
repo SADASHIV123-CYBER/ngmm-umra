@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar.jsx";
+import { requestNotificationPermission } from './utils/notification.js';
 import Footer from "./components/Footer.jsx";
 
 export default function App({ children }) {
@@ -10,3 +11,7 @@ export default function App({ children }) {
     </div>
   );
 }
+
+useEffect(() => {
+  requestNotificationPermission();
+}, []);

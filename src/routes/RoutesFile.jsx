@@ -3,8 +3,11 @@ import Home from "../pages/Home.jsx";
 import Events from "../pages/Events.jsx";
 import Members from "../pages/Members.jsx";
 import Gallery from "../pages/Gallery.jsx";
-// import Live from "../pages/Live.jsx";
 import Contact from "../pages/Contact.jsx";
+import InstaLive from "../pages/LiveStreamInsta.jsx";
+import LiveStreamYt from "../pages/LiveStreamYt.jsx";
+import MandalInfo from "../pages/MandalInfo.jsx";
+import TimeTable from "../pages/TimeTable.jsx";
 
 export default function RoutesFile() {
   return (
@@ -13,8 +16,12 @@ export default function RoutesFile() {
       <Route path="/events" element={<Events />} />
       <Route path="/members" element={<Members />} />
       <Route path="/gallery" element={<Gallery />} />
-      {/* <Route path="/live" element={<Live />} /> */}
       <Route path="/contact" element={<Contact />} />
+      <Route path="/instaLive" element={< InstaLive/>} />
+      <Route path="ytLive" element={<LiveStreamYt />} />
+      <Route path="info" element={<MandalInfo />} />
+      <Route path="/timetable" element={<TimeTable />} />
+
     </Routes>
   );
 }
