@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import Navbar from "./components/Navbar.jsx";
 import { requestNotificationPermission } from './utils/notification.js';
 import Footer from "./components/Footer.jsx";
