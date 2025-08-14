@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 
-import baithakImg from '../assets/baithak.jpg'
-// 2025 gallery only
+import baithakImg from '../assets/baithak.jpg';
+import ganesh2025 from '../assets/ganesh2025.jpg';
+import ganesh2024 from '../assets/ganesh2024.jpg';
+
 const galleryData = {
   2025: [
     { id: 1, title: "2025 ची बैठक", image: baithakImg },
-    { id: 2, title: "2025 गणेश मूर्ती", image: "path_to_your_image/ganesh2025.jpg" },
-    // { id: 3, title: "नृत्य स्पर्धा 2025", image: "path_to_your_image/nritya2025.jpg" },
-    // { id: 4, title: "संगीत स्पर्धा 2025", image: "path_to_your_image/sangeet2025.jpg" },
-    // { id: 5, title: "प्रदर्शन आणि जत्रा", image: "path_to_your_image/procession2025.jpg" },
+    { id: 2, title: "2025 गणेश मूर्ती", image: ganesh2025 },
+  ],
+  2024: [
+    { id: 3, title: "2024 गणेश मूर्ती", image: ganesh2024 },
   ],
 };
 

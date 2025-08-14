@@ -4,10 +4,10 @@ import bhagvatImage from "../assets/bhagvat.jpg";
 import rajuImage from "../assets/raju.jpg";
 import pankajImage from "../assets/pankaj.jpg";
 import dhyanDeepImage from "../assets/dhyandeep.jpg";
-// import niteenImage from "../assets/niteen.jpg";
+import niteenImage from "../assets/niteen.jpg";
 import shrikantBImage from "../assets/shrikantb.jpg";
 // import shrikantDImage from "../assets/shrikantd.jpg";
-// import gyaneshwarImage from "../assets/gyaneshwar.jpg";
+import gyaneshwarImage from "../assets/gyaneshwar.jpg";
 import balajiBImage from "../assets/balajib.jpg";
 // import vishnuImage from "../assets/vishnu.jpg";
 import balajiKImage from "../assets/balajik.jpg";
@@ -18,10 +18,10 @@ const membersData = [
   { id: 2, name: "श्री राजेश बोंगाणे", role: "सहकार मंत्रालय (उपाध्यक्ष), गृह मंत्रालय (सुरक्षा)", image: rajuImage },
   { id: 3, name: "श्री पंकज सोनटक्के", role: "प्रशासकीय सेवा आणि सांस्कृतिक मंत्रालय (सचिव)", image: pankajImage },
   { id: 4, name: "श्री ज्ञानदीप बोंगाणे", role: "सहाय्यक प्रशासकीय सेवा आणि सांस्कृतिक मंत्रालय (सहसचिव)", image: dhyanDeepImage },
-  { id: 5, name: "श्री नितीन जी कुगावकर", role: "अर्थ मंत्रालय माहिती (खजिनदार)", image: "niteenImage" },
+  { id: 5, name: "श्री नितीन जी कुगावकर", role: "अर्थ मंत्रालय माहिती (खजिनदार)", image: niteenImage },
   { id: 6, name: "श्री श्रीकांत भांडे", role: "सहाय्यक अर्थ मंत्रालय (सहखजिनदार)", image: shrikantBImage },
   { id: 7, name: "श्री श्रीकांत धारणे", role: "अन्न व पुरवठा मंत्रालय आणि सांस्कृतिक मंत्रालय (प्रसाद वितरण समन्वयक)", image: "shrikantDImage" },
-  { id: 8, name: "श्री ज्ञानेश्वर काळे", role: "सांस्कृतिक मंत्रालय आणि सार्वजनिक बांधकाम मंत्रालय (मंडप सजावट प्रमुख)", image: "gyaneshwarImage" },
+  { id: 8, name: "श्री ज्ञानेश्वर काळे", role: "सांस्कृतिक मंत्रालय आणि सार्वजनिक बांधकाम मंत्रालय (मंडप सजावट प्रमुख)", image: gyaneshwarImage },
   { id: 9, name: "श्री बाळाजी बोंगाणे (खोबराजी)", role: "सांस्कृतिक मंत्रालय आणि सार्वजनिक बांधकाम मंत्रालय (मंडप सजावट प्रमुख), गृह मंत्रालय (सुरक्षा)", image: balajiBImage },
   { id: 10, name: "श्री विष्णू तोरकड", role: "स्वच्छता व पर्यावरण मंत्रालय (सफाईदार)", image: "vishnuImage" },
   { id: 11, name: "श्री बाळाजी काळे", role: "सामान्य सहाय्य मंत्रालय (विशेष सदस्य)", image: balajiKImage },
