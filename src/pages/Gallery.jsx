@@ -22,25 +22,28 @@ export default function Gallery() {
   const closeModal = () => setSelectedPhoto(null);
 
   return (
-    <section className="min-h-screen bg-gradient-to-b from-yellow-50 to-orange-100">
+    <section className="bg-gradient-to-b from-yellow-50 to-orange-100 min-h-screen">
       {/* Hero Banner */}
-      <div className="relative w-full h-64 sm:h-96 md:h-[500px] lg:h-[600px]">
-        <img
-          src={banner2025}
-          alt="2025 Banner"
-          className="w-full h-full object-cover"
-        />
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/25 to-black/20 flex flex-col justify-center items-center px-4 text-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white drop-shadow-lg">
-            2025 गणपती उत्सव
-          </h1>
-          <p className="mt-2 sm:mt-4 text-sm sm:text-base md:text-lg text-white/90">
-            आमच्या फोटो गॅलरी आणि इव्हेंट्स बघा
-          </p>
+      <div className="relative w-full">
+        {/* Use aspect ratio for responsive full banner */}
+        <div className="w-full aspect-[16/9] sm:aspect-[3/1] md:aspect-[16/5] lg:aspect-[16/4]">
+          <img
+            src={banner2025}
+            alt="2025 Banner"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/30 flex flex-col justify-center items-center px-4 text-center">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white drop-shadow-lg">
+              2025 गणपती उत्सव
+            </h1>
+            <p className="mt-2 sm:mt-4 text-sm sm:text-base md:text-lg text-white/90">
+              आमच्या फोटो गॅलरी आणि इव्हेंट्स बघा
+            </p>
+          </div>
         </div>
       </div>
 
+      {/* Gallery */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
         {Object.keys(galleryData).map((year) => (
           <div key={year} className="mb-12">
