@@ -22,32 +22,32 @@ export default function Gallery() {
   const closeModal = () => setSelectedPhoto(null);
 
   return (
-    <section className="py-12 sm:py-16 bg-gradient-to-b from-yellow-50 to-orange-100 min-h-screen">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center text-orange-700 mb-8 sm:mb-12">
-          आमचा फोटो गॅलरी 📸
-        </h2>
-
-        {/* 2025 Banner */}
-        <div className="mb-8 sm:mb-12 rounded-xl overflow-hidden relative shadow-lg">
-          <img
-            src={banner2025}
-            alt="2025 Banner"
-            className="w-full h-48 sm:h-64 md:h-96 object-cover"
-          />
-          <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-            <h3 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white text-center px-4">
-              2025 गणपती उत्सव
-            </h3>
-          </div>
+    <section className="min-h-screen bg-gradient-to-b from-yellow-50 to-orange-100">
+      {/* Hero Banner */}
+      <div className="relative w-full h-64 sm:h-96 md:h-[500px] lg:h-[600px]">
+        <img
+          src={banner2025}
+          alt="2025 Banner"
+          className="w-full h-full object-cover"
+        />
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/25 to-black/20 flex flex-col justify-center items-center px-4 text-center">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white drop-shadow-lg">
+            2025 गणपती उत्सव
+          </h1>
+          <p className="mt-2 sm:mt-4 text-sm sm:text-base md:text-lg text-white/90">
+            आमच्या फोटो गॅलरी आणि इव्हेंट्स बघा
+          </p>
         </div>
+      </div>
 
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
         {Object.keys(galleryData).map((year) => (
-          <div key={year} className="mb-8 sm:mb-12">
-            <h3 className="text-xl sm:text-2xl font-semibold text-orange-800 mb-4 sm:mb-6">
+          <div key={year} className="mb-12">
+            <h2 className="text-2xl sm:text-3xl font-semibold text-orange-800 mb-6">
               {year} चे फोटो
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {galleryData[year].map((photo) => (
                 <div
                   key={photo.id}
@@ -57,10 +57,10 @@ export default function Gallery() {
                   <img
                     src={photo.image}
                     alt={photo.title}
-                    className="w-full h-40 sm:h-48 md:h-56 object-cover"
+                    className="w-full h-48 sm:h-56 md:h-64 object-cover"
                   />
-                  <div className="p-3 sm:p-4 bg-white">
-                    <p className="text-orange-800 font-semibold text-center text-sm sm:text-base">
+                  <div className="p-4 bg-white">
+                    <p className="text-orange-800 font-semibold text-center">
                       {photo.title}
                     </p>
                   </div>
